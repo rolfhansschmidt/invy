@@ -1,0 +1,14 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+data
+*.png
+test_*.py
+deploy
+README.md
+
+.env
+.env.*
+INSTALL.md
+requirements.in

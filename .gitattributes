@@ -1,0 +1,2 @@
+# Keep third-party distributions verbatim, including their upstream line endings.
+static/vendor/* -whitespace

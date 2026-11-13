@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+data/*
+!data/.gitkeep
+*.png
+
+.venv/
+
+# Internal verification and one-off migration tools stay outside the repository.
+/test_*.py
+/migrate_sqlite.py
+/SECURITY_REVIEW.md
+/browser-check.mjs
+/seed.py

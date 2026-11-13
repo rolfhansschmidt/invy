@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="csrf-token" content="{{ csrf_token }}"><meta name="theme-color" content="#f5f6f4"><title>Invy</title><link rel="stylesheet" href="/vendor/jsuites.css"><link rel="stylesheet" href="/vendor/jspreadsheet.css"><link rel="stylesheet" href="/style.css"><script defer src="/vendor/jsuites.js"></script><script defer src="/vendor/jspreadsheet.js"></script><script defer src="/app.js"></script></head>
+<body>
+<header><a href="/" class="brand" aria-label="Invy home"><span class="brand-icon" aria-hidden="true">▦</span> Invy</a><div class="nav-actions"><span class="status" id="status" role="status">Connecting</span><button class="primary" id="edit">Edit inventory <span aria-hidden="true">↗</span></button><div class="actions" id="edit-actions" hidden><button id="cancel">Cancel</button><button class="primary" id="save">Save</button></div><form action="/auth/logout" method="post" class="logout"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button type="submit" title="Signed in as {{ username }}">Sign out</button></form></div></header>
+<main>
+<div id="notice" role="status" aria-live="polite" hidden></div>
+<section id="browse" aria-label="Inventory list">
+<div class="table-shell"><table class="inventory-table"><thead><tr><th>Inventory-Number</th><th>Name</th><th>Description</th><th>Storage Location</th><th>Additional info</th><th>Removal Cause</th></tr></thead><tbody id="items"></tbody></table><p id="empty" hidden>No inventory items yet.</p></div>
+<div class="footnote"><span id="updated"></span></div>
+</section>
+<section id="editor" hidden aria-label="Edit inventory spreadsheet">
+<div id="sheet" aria-label="Inventory spreadsheet"></div>
+</section>
+</main></body></html>
